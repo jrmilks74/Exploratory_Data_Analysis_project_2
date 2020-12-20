@@ -1,1 +1,1 @@
-# Exploratory_Data_Analysis_project_2
+Graphs and code from the final Exploratory Data Analysis course in the John Hopkins University Data Science certification
