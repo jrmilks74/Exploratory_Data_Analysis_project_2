@@ -1,0 +1,8 @@
+setwd("~/Desktop/Data_science/Exploratory Data Analysis Week 4 project")
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+head(NEI)
+Baltimore_city <- subset(NEI, fips == "24510")
+BC_year <- with(Baltimore_city, aggregate(Emissions, by = list(year), FUN = sum))
+head(BC_year)
+barplot(x~Group.1, data = BC_year, xlab = "Year", ylab = "Total 2.5 PM emissions (tons)", main = "Baltimore City 2.5 PM emissions by Year")

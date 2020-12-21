@@ -1,0 +1,7 @@
+setwd("~/Desktop/Data_science/Exploratory Data Analysis Week 4 project")
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+head(NEI)
+total <- with(NEI, aggregate(Emissions, by = list(year), FUN = sum))
+head(total)
+barplot(x~Group.1, data = total, xlab = "Year", ylab = "Total 2.5 PM emissions (tons)", main = "US 2.5 PM emissions by Year")
